@@ -2,7 +2,9 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8"> {% if title %}
+    <meta charset="UTF-8">
+    <!--  -->
+    {% if title %}
     <title>{{ title }}</title>
     {% else %}
     <title>Welcome to the best Movie Review website</title>
@@ -18,6 +20,17 @@
 
     <!-- block content -->
     {% block content%} {% endblock %}
+
+
+
+    <!--  -->
+    {%block styles %}
+    <!-- super var -->
+    {{super()}}
+    <!--Importing the simple mde css and js files  -->
+    {{ simplemde.css}} {{ simplemde.js }}
+    <!-- endblock -->
+    {% endblock %}
 
 </body>
 
